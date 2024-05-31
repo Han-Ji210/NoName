@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Viewport height */
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    gap: 6%;  /*Space between buttons */
+}
+
+.button-container .start-button {
+    height: 50%;
+    width: 40%; /* 40% of viewport width */
+    font-size: 5vw; /* Adjust font size as needed */
+}
+
+.button-container .other-buttons {
+    display: flex;
+    justify-content: center;
+    width: 40%; /* Same width as start button */
+    gap: 6%; /* Space between the two buttons */
+    height: 20%; 
+}
+
+.button-container .other-buttons button {
+    flex: 1;
+    font-size: 3vw; 
+}
