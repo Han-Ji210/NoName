@@ -5,11 +5,9 @@ body, html {
 }
 
 header {
-    background-color: #f5f5f5;
     padding: 10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ccc;
 }
 
 #header-container {
@@ -53,4 +51,15 @@ main {
     background-color: #e0e0e0;
     border-radius: 10px;
     display: inline-block;
+}
+
+/* 기존 스타일에 추가 */
+
+#back-button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 24px; 
+    color: #000; 
+    text-decoration: none; 
+    margin-right: 20px; 
 }
