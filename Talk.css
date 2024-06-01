@@ -19,9 +19,12 @@ header {
 }
 
 #back-button {
-    margin-right: 20px;
+    display: inline-block;
     padding: 5px 10px;
-    font-size: 16px;
+    font-size: 24px; 
+    color: #000; 
+    text-decoration: none; 
+    margin-right: 20px; 
 }
 
 #contact-image {
@@ -54,19 +57,9 @@ main {
     display: inline-block;
 }
 
-#back-button {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 24px; 
-    color: #000; 
-    text-decoration: none; 
-    margin-right: 20px; 
-}
-
 .message-sender, .message-receiver {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #f2f2f2;
     border-radius: 10px;
     display: inline-block;
     max-width: 60%;
@@ -74,7 +67,6 @@ main {
 
 .message-sender {
     background-color: #d1e7ff;
-
 }
 
 .message-receiver {
@@ -117,3 +109,66 @@ main {
 body {
     padding-bottom: 60px; 
 }
+
+/* 테블릿 화면을 위한 스타일링 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #header-container {
+        max-width: 100%;
+    }
+
+    #message-container {
+        max-width: 100%;
+    }
+
+    .chat-icon, .emoji-icon {
+        width: 30px; 
+    }
+
+    .input-box input {
+        font-size: 1.2rem;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    #back-button {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 24px; 
+        color: #000; 
+        text-decoration: none; 
+        margin-right: 20px; 
+    }
+
+    #contact-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+    }
+
+    #contact-name {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    .message-sender, .message-receiver {
+        padding: 15px;
+    }
+
+    .chat-input-container {
+        padding: 15px;
+    }
+
+    .input-box {
+        padding: 10px 15px;
+    }
+
+    body {
+        padding-bottom: 80px;
+    }
+}
+
