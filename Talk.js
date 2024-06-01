@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
          {text: "택배가 도착했습니다. 수령을 원하시면 링크를 클릭하세요.", from: "sender"},
          {text: "배송이 완료되었습니다. 배송 확인을 위해 링크를 클릭해주세요.", from: "sender"}
      ]},
-     // 여기에 더 많은 스미싱 예제 추가
  };
+
+ 
  function getContactId() {
      const urlParams = new URLSearchParams(window.location.search);
      return urlParams.get('contactId');
@@ -35,3 +36,27 @@ document.addEventListener('DOMContentLoaded', function() {
  }
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const optionsContainer = document.getElementById('options-container');
+
+    const options = [
+        '선택지 1',
+        '선택지 2',
+        '선택지 3',
+        '선택지 4'
+    ];
+
+    options.forEach(option => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.classList.add('option-button');
+        button.addEventListener('click', () => handleOptionClick(option));
+        optionsContainer.appendChild(button);
+    });
+});
+
+function handleOptionClick(option) {
+    console.log(`선택한 옵션: ${option}`);
+    // 선택한 옵션에 따라 동작을 정의하세요.
+}
