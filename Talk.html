@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대화창</title>
-    <link rel="stylesheet" href="Talk.css"> <!-- CSS 파일명을 Talk.css로 변경 -->
+    <link rel="stylesheet" href="Talk.css">
 </head>
 <body>
     <header>
         <div id="header-container">
-            <a href="TalkSelect.html" id="back-button">&#60;</a> <!-- 뒤로가기 버튼을 '<'에서 '>'로 변경하고 <a> 태그 사용 -->
+            <a href="TalkSelect.html" id="back-button">&#60;</a> 
             <img src="contact-image.jpg" alt="대화 상대 이미지" id="contact-image">
             <div id="contact-name">대화 상대 이름</div>
         </div>
@@ -19,6 +19,17 @@
             <!-- 대화 내용이 동적으로 로드됩니다 -->
         </div>
     </main>
+<div class="chat-input-container">
+    <img src="photo-icon.png" class="chat-icon">
+    <img src="camera-icon.png" class="chat-icon">
+    <img src="plus-icon.png" class="chat-icon">
+    <div class="input-box">
+        <input type="text" placeholder="">
+        <img src="emoji-icon.png"  class="emoji-icon">
+    </div>
+    <img src="voice-icon.png"  class="chat-icon">
+</div>
+
     <script src="Talk.js"></script>
 </body>
 </html>
