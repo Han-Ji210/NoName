@@ -102,29 +102,28 @@ main {
 /* body {
     padding-bottom: 60px; 
 } */
-
-#options-container {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.options {
+    text-align: center; 
+    padding: 3% 0; 
 }
 
-.option-button {
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+.option {
+    display: block; 
+    margin: 5px auto; 
+    padding: 1% 1%; 
+    background-color: #007bff; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+    width: 10%;
+    height: 10%;
+    margin-top: 1%;
+    /* max-width: 200px;  */
 }
 
-.option-button:hover {
-    background-color: #0056b3;
+.option:hover {
+    background-color: #0056b3; 
 }
 
 
