@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const smishingExamples = {
-     'contact1': { name: '은행 사칭 경고', image: 'smishing1.jpg', messages: [
-         {text: "고객님의 계좌가 동결되었습니다. 아래 링크를 클릭하여 확인해 주세요."},
-     ]},
-     'contact2': { name: '택배 사칭 알림', image: 'smishing2.jpg', messages: [
-         {text: "택배가 도착했습니다. 수령을 원하시면 링크를 클릭하세요."},
-         {text: "배송이 완료되었습니다. 배송 확인을 위해 링크를 클릭해주세요."}
-     ]},
- };
-
  
  function getContactId() {
      const urlParams = new URLSearchParams(window.location.search);
@@ -46,11 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const optionsDiv = document.createElement('div');
             optionsDiv.className = 'options';
             
-            optionsDiv.innerHTML = `
-                <a href="#" class="option">해당 번호로 전화 걸기</a>
-                <a href="#" class="option">차단하기</a>
-                <a href="#" class="option">다른 번호로 확인하기</a>
-            `;
             
             optionsPlaceholder.appendChild(optionsDiv);
         }
