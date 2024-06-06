@@ -45,14 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
             optionsPlaceholder.innerHTML = ''; 
             options.forEach((option, index) => {
                 const optionLink = document.createElement('a'); 
-                optionLink.classList.add('option'); // div 대신 a 태그에 직접 클래스 추가
+                optionLink.classList.add('option');
     
-                optionLink.href = adequacyLevels[index] === 1 ? 'respond_1.html' : 'respond_0.html';
+                const baseHref = 'respond.html';
+                optionLink.href = `${baseHref}?contactId=${contactId}&option=${index}`;
                 
                 optionLink.textContent = option; 
-                optionsPlaceholder.appendChild(optionLink); // 직접 a 태그를 optionsPlaceholder에 추가
+                optionsPlaceholder.appendChild(optionLink); 
             });
         }
     }
+    
     
 });
