@@ -54,7 +54,7 @@ main {
     min-height: 100px; 
 }
 
-#message-container div {
+#message-container a {
     margin-bottom: 10px;
     padding: 10px;
     color : black;
