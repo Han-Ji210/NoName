@@ -7,19 +7,24 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-size: 8vw;
+    padding-bottom: 5%;
+}
+
 .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 60%;
+    width: 75%;
+    height: 55%;
     gap: 6%;
 }
 
 .start-button { 
     height: 50%;
-    width: 40%;
-    font-size: 5vw;
+    width: 80%;
+    font-size: 6vw;
 }
 
 .button-container .other-buttons {
