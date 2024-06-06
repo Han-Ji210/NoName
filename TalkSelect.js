@@ -1,21 +1,30 @@
-function getRandomMessageIndex(messages) {
-    return Math.floor(Math.random() * messages.length);
+function getRandomMessageIndex(textArrayLength) {
+    return Math.floor(Math.random() * textArrayLength);
 }
 
 function loadLastMessages() {
     const contactLinks = document.querySelectorAll('.contact-link');
-    contactLinks.forEach(contactLink => {
+    // let messageIndexParams = '';
+
+    contactLinks.forEach((contactLink, index) => {
         const contactId = contactLink.dataset.contactId;
         const contact = dataset[contactId];
         const lastMessageElement = contactLink.querySelector('.last-message');
 
-        if (contact.selectedMessageIndex === null) {
-            contact.selectedMessageIndex = getRandomMessageIndex(contact.text);
-        }
-
-        const lastMessage = contact.text[contact.selectedMessageIndex];
+        const selectedMessageIndex = getRandomMessageIndex(contact.text.length);
+        console.log(`Contact ID: ${contactId}, Selected Message Index: ${selectedMessageIndex}`);
+        const lastMessage = contact.text[selectedMessageIndex];
         lastMessageElement.textContent = lastMessage;
+
+        // messageIndexParams += selectedMessageIndex.toString().padStart(2, '0');
+        
+        const originalHref = contactLink.getAttribute('href');
+        const newHref = `${originalHref}&messageIndex=${selectedMessageIndex}`;
+        contactLink.setAttribute('href', newHref);
     });
+
+    // console.log(`MessageIndexParams: ${messageIndexParams}`);
 }
+
 
 window.onload = loadLastMessages;
