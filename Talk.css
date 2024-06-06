@@ -71,12 +71,6 @@ main {
     max-width: 60%;
 }
 
-.contact-list {
-    margin: 20px 0px;
-    padding: 10px;
-    background: #f8f8f8;
-}
-
 .chat-input-container {
     display: flex;
     align-items: center;

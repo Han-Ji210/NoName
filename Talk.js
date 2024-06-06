@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getMessageIndex() {
         const urlParams = new URLSearchParams(window.location.search);
-        return parseInt(urlParams.get('messageIndex')); // 문자열을 정수로 변환
+        return parseInt(urlParams.get('messageIndex'));
     }
 
     const contactId = getContactId();
-    const messageIndex = getMessageIndex(); // messageIndex를 가져옴
+    const messageIndex = getMessageIndex();
     if (contactId && dataset[contactId]) {
         const contact = dataset[contactId];
         document.getElementById('contact-name').textContent = contact.name;
-        document.getElementById('contact-image').src = contact.image;
     /*
     if (messageIndex !== null && !isNaN(messageIndex) && messageIndex >= 0 && messageIndex < contact.text.length) {
         const selectedMessageIndex = messageIndex;
